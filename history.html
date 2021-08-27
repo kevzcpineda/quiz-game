@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="a">
+            <div class="col-6">
+                <div class="question-wrapper">
+                    <img src="./img/36.png" class="question-img" alt="question image">
+                    <span class="count" id="count">1</span>
+                </div>
+            </div>
+            <div class="col-6 timer-col">
+                <div class="timer-wrapper">
+                    <img src="./img/37.png" class="timer-img" alt="timer image">
+                    <span class="timer" id="timer"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 bg-container" id="questionRow">
+                <div>
+                    <h1 id="question"></h1>
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        <input type="radio" name="a" value="0" id="choice-1">
+                        <label id="opt1" for="choice-1"></label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio" name="a" value="1" id="choice-2">
+                        <label id="opt2" for="choice-2"></label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio" name="a" value="2" id="choice-3">
+                        <label id="opt3" for="choice-2"></label>
+                    </div>
+                </div>
+                <div class="next-wrapper">
+                    <span id="nextbtn" class="next-btn">Next question</span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="b">
+            <div class="col-12 wrapper-col">
+                <div class="total-score">
+                    <h1>score: <span id="score"></span></h1>
+                </div>
+                <div class="message-img">
+                    <img src="img/43.png">
+                </div>
+                <div class="try-again">
+                    <h1 class="try" id="seeCorrectAnswer">see correct answers</h1>
+                    <h1 class="try" id="retry">retry</h1>
+                    <h1 class="try" id="chooseAnotherCategory">choose another category</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row correctAnswerdiv">
+            <div class="col-12">
+                <div class="answer-wrapper">
+                    <div class="answer-questiom">
+                        <h1 id="correctQuestion"></h1>
+                    </div>
+                    <div class="correct-answer">
+                        <h1>Correct Answer: <span id="correctAnswer"></span></h1>
+                    </div>
+                    <div class="next-correct-answer">
+                        <h1 id="next">next</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="image-wrapper chooseACagory">
+                <div class="choose-category-container">
+                    <img class="choose-category-img" src="img/23.png" id="cat">
+                </div>
+                <div class="category-container">
+                    <img class="category-img" src="img/24.png" id="literature">
+                    <img class="category-img" src="img/25.png" id="science">
+                    <img class="category-img" src="img/26.png" id="history">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row youChooseContainer">
+        <div class="col-12">
+            <div class="image-wrapper" id="literatureCon">
+                <img class="img" src="img/30.png" id="you-choose-literature">
+                <img class="choose-category-img" src="img/27.png" id="ready">
+            </div>
+            <div class="image-wrapper" id="scienceCon">
+                <img class="img" src="img/29.png" id="you-choose-science">
+                <img class="choose-category-img" src="img/27.png" id="ready1">
+            </div>
+            <div class="image-wrapper" id="historyCon">
+                <img class="img" src="img/28.png" id="you-choose-history">
+                <img class="choose-category-img" src="img/27.png" id="ready2">
+            </div>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+
+</html>
